@@ -4,7 +4,7 @@ namespace App\Classes;
 
 use Illuminate\Http\Client\Response;
 
-class HttpResponse
+class APIData
 {
     protected $response;
     protected $content;
