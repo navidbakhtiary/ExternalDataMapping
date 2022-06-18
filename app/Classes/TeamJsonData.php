@@ -20,6 +20,6 @@ class TeamJsonData extends JsonData implements DataInterface
 
     public function mapObjectToModel(object $data)
     {
-        return 'negasht';
+        
     }
 }
