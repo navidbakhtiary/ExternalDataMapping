@@ -6,6 +6,7 @@ class TeamXMLData extends XMLData implements DataInterface
 {
     private $xml_data;
 
+    //Get teams data as converted xml to json from the body of response
     public function extractData()
     {
         $this->data = null;
@@ -16,6 +17,7 @@ class TeamXMLData extends XMLData implements DataInterface
         }
     }
 
+    //Check existence of main data key in the body of response
     public function hasData()
     {
         return property_exists($this->xml_data, config('global.ext_api.teams.data_key'));

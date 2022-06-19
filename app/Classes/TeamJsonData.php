@@ -2,9 +2,10 @@
 
 namespace App\Classes;
 
-
+//Class for handling teams json data in external API response
 class TeamJsonData extends JsonData implements DataInterface
 {
+    //Get teams data as json from the body of response 
     public function extractData()
     {
         $this->data = null;
@@ -13,13 +14,9 @@ class TeamJsonData extends JsonData implements DataInterface
         }
     }
 
+    //Check existence of main data key in the body of response
     public function hasData()
     {
         return property_exists($this->content, config('global.ext_api.teams.data_key'));
-    }
-
-    public function mapObjectToModel(object $data)
-    {
-        
     }
 }
